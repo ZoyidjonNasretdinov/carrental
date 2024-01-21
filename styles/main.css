@@ -328,10 +328,17 @@ img {
     background-size: 20px 20px;
     background-repeat: no-repeat;
     background-position: center;
+    transition: background-color 0.3s linear;
 }
 
 .hero-btn-item:nth-child(2) > .hero-btn {
     background-image: url("../images/right.svg");
+    transform: rotate(180deg);
+}
+
+.hero-btn:hover {
+    background-color: #299764;
+    background-image: url("../images/activeright.svg");
     transform: rotate(180deg);
 }
 
@@ -383,9 +390,14 @@ img {
     font-size: 16px;
     font-weight: 500;
     text-decoration: none;
+    transition: background-color 0.3s linear, color 0.3s linear;
 }
 
-.marketing-item-active {
+.marketing-link:hover {
+    background-color: #f5f5f5;
+}
+
+.marketing-link:active {
     color: #fff;
     text-align: center;
     font-weight: 500;
