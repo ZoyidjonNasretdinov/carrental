@@ -23,7 +23,7 @@
     font-display: swap; 
     src:url('../fonts/montserrat600.woff2') format('woff2'), 
     url('../fonts/montserrat600.woff') format('woff'),
-
+    
 }
 
 
@@ -619,7 +619,7 @@ img {
     padding: 50px 40px 40px 40px;
     align-items:center;
     gap: 20px; 
-
+    
 }
 
 .feedback-item {
@@ -868,6 +868,7 @@ img {
     padding: 20px 15px 15px 15px;
     border-radius: 16px;
     background-color: #f5f5f5;
+    transition: background-color 0.3s linear;
 }
 
 .safe-subdesc {
@@ -876,6 +877,7 @@ img {
     color: #000;
     font-weight: 500;
     line-height: 22px;
+    transition: color 0.3s linear;
 }
 
 
@@ -892,14 +894,40 @@ img {
     content: "";
 }
 
+.safe-item:hover {
+    background-color: #299764;
+}
+
+.safe-item:hover .safe-subdesc {
+    color: #fff;
+}
+
+.safe-item:nth-child(1):hover > .safe-subdesc::before {
+    background-image: url("../images/hoverflask.svg");
+    background-size: 19px;
+    content: "";
+}
+
 
 .safe-item:nth-child(2) > .safe-subdesc::before {
     background-image: url("../images/heartbeat.svg");
     content: "";
 }
 
+.safe-item:nth-child(2):hover > .safe-subdesc::before {
+    background-image: url("../images/hoverheart.svg");
+    background-size: 25px;
+    content: "";
+}
+
 .safe-item:nth-child(3) > .safe-subdesc::before {
     background-image: url("../images/folder.svg");
+    content: "";
+}
+
+.safe-item:nth-child(3):hover > .safe-subdesc::before {
+    background-image: url("../images/hoverfolder.svg");
+    background-size: 25px;
     content: "";
 }
 
